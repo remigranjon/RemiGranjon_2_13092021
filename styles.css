@@ -248,9 +248,11 @@ main {
 
 .accomodations {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    gap: 30px;
     justify-content: space-between;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 .accomodations h1 {
@@ -271,12 +273,13 @@ main {
 
 .accomodations__location {
     box-sizing: border-box;
-    width: 700px;
+    flex-shrink: 3;
+    max-width: 700px;
     /* width: min-content; */
     background: var(--grey-bg);
     border-radius: 20px;
     padding: 35px;
-    /* margin-top: 30px; */
+    margin-top: 30px;
 }
 
 
@@ -291,7 +294,7 @@ main {
     
 
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-evenly;
     flex-wrap:wrap;
     gap: 25px;
 }
@@ -301,6 +304,7 @@ main {
     border-radius: 15px;
     background: white;
     width: 185px;
+    /* width: 100%; */
     box-shadow: var(--dark-grey-bg) 0px 8px 24px;
 }
 
@@ -384,12 +388,14 @@ main {
 
 .accomodations__popular {
     box-sizing: border-box;
+    flex-shrink: 0;
     width: 335px;
-    padding: 30px 30px 0 30px;
+    padding: 30px 30px 30px 30px;
     background: var(--grey-bg);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 .accomodations__popular__header {
@@ -548,3 +554,52 @@ footer p {
 .footer__column {
     width: 362px;
 }
+
+@media screen and (max-width:1150px) {
+    .accomodations__location__card {
+        width: 45%;
+        min-width: 185px;
+        max-width: 370px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .accomodations__location__card {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .accomodations {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .accomodations__location {
+        width: 335px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    
+    header {
+        padding: 0;
+    }
+
+    main {
+        padding: 0;
+    }
+    
+    .accomodations__popular {
+        border-radius: 0;
+        width: 100%;
+        padding: 30px 10px;
+    }
+
+    .accomodations__location {
+        width: 100%;
+    }
+
+}
+
