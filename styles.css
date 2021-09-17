@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
 
 :root {
     --blue: #0065FC;
@@ -9,14 +9,31 @@
 
 body {
     margin: 0;
-    padding: 0 60px;
+    
     font-family: 'Raleway', sans-serif;
+    background: grey;
+    /* box-sizing: border-box; */
+    
+}
+
+.wrapper {
+    max-width: 1150px;
+    padding: 0 40px;
+    margin: 0 auto;
+    background: white;
+    box-sizing: border-box;
 }
 
 a {
     color: black;
     text-decoration: none;
 }
+
+h1,h2 {
+    margin: 0;
+}
+
+
 /* ------------------------------------------ */
 /* Header styling */
 /* ------------------------------------------ */
@@ -27,8 +44,10 @@ header {
 
 .logo {
     width: 100px;
-    height: 50px;
-    padding-top: 40px;
+    height: 38px;
+    padding-top: 35px;
+    position: relative;
+    right: 10px;
 }
 
 .logo img {
@@ -37,19 +56,19 @@ header {
 }
 
 nav {
-    width : 370px;
+    width : 330px;
     display: flex;
     justify-content: space-between;
 }
 
 nav a {
-    padding-top:50px;
-    font-size: 1em;
+    padding-top:40px;
+    font-size: 0.8em;
     
 }
 
 .nav__anchor {
-    padding: 50px 20px 0 20px;
+    padding: 40px 20px 0 20px;
 }
 
 .nav__anchor:hover {
@@ -71,18 +90,20 @@ nav a {
 }
 
 .location h1 {
-    font-size: 1.4em;
+    font-size: 1.1em;
+    font-weight: 700;
     margin: 0;
 }
 
 .location p {
-    margin-top: 10px;
+    margin-top: 7px;
+    font-size: 0.8em;
 }
 
 .location__search {
     display: flex;
-    height: 50px;
-    margin-top: 20px;
+    height: 42px;
+    margin-top: 15px;
 }
 
 .location__search__icon {
@@ -90,23 +111,25 @@ nav a {
     border-bottom-left-radius: 15px;
     height: 100%;
     background: var(--grey-bg);
-    width: 50px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .location__search__icon i {
-    font-size: 1.1em;
+    font-size: 0.9em;
+    position: relative;
+    left: 2px;
 }
 
 .location__search__input {
     border: 1px solid var(--grey-bg);
-    width: 200px;
-    font-size: 1.1em;
+    width: 175px;
+    font-size: 0.95em;
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
-    padding-left: 20px; 
+    padding-left: 10px; 
 }
 
 .location__search__input:focus {
@@ -119,7 +142,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 110px;
     font-weight: 600;
     font-size: 1.1em;
     border-top-right-radius: 15px;
@@ -137,21 +160,21 @@ nav a {
 
 .filters {
     display: flex;
-    margin-top: 40px;
+    margin-top: 15px;
     flex-wrap: wrap;
 }
 
 .filters p {
-    font-size: 1.1em;
+    font-size: 0.95em;
     font-weight: 700;
-    margin: 13px 20px 13px 10px;
+    margin: 10px 12px 10px 5px;
 }
 
 .filters__filtres {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 10px 10px 0;
+    margin: 10px 0;
 }
 
 .filters__button {
@@ -177,7 +200,7 @@ nav a {
     color: var(--blue);
     background: var(--light-blue);
     height: 101%;
-    width: 47px;
+    width: 38px;
     border-radius: 60px;
     border: 2px solid var(--light-blue);
     position: relative;
@@ -190,7 +213,7 @@ nav a {
 
 .information {
     display: flex;
-    margin-top: 30px;
+    margin-top: 20px;
     align-items: center;
 }
 
@@ -199,16 +222,17 @@ nav a {
     justify-content: center;
     align-items: center;
     color: var(--blue);
-    font-size: 0.7em;
+    font-size: 0.6em;
     border-radius: 20px;
     border: 1px solid var(--dark-grey-bg);
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
 
 .information__text {
     margin: 0;
-    padding-left: 15px;
+    padding-left: 10px;
+    font-size: 0.8em;
 
 }
 
@@ -220,52 +244,68 @@ nav a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 30px;
 }
 
+.accomodations h1 {
+    font-size: 1.1em;
+}
+
+.accomodations h2 {
+    font-size: 0.8em;
+}
+
+.accomodations p {
+    margin: 5px 0;
+    font-size: 0.7em;
+}
 /* ------------------------------------------ */
 /* Accomodations__location section styling */
 /* ------------------------------------------ */
 
 .accomodations__location {
-    /* width: 60%; */
+    box-sizing: border-box;
+    width: 700px;
+    /* width: min-content; */
     background: var(--grey-bg);
     border-radius: 20px;
-    padding: 40px;
-    margin-top: 30px;
+    padding: 35px;
+    /* margin-top: 30px; */
 }
 
-.accomodations__location h1 {
-    margin: 0;
-    font-size: 1.4em;
-}
+
 
 .accomodations__location__cards {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
+    /* margin-top: 20px; */
+    margin: 20px auto 0 auto;
+    /* display: grid; */
+    /* grid-template-columns: repeat(3,1fr); */
+    /* grid-template-columns: repeat(auto-fill,240px); */
+    /* grid-template-rows: repeat(2,1fr); */
+    
+
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap:wrap;
     gap: 25px;
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap:wrap; */
 }
 
 .accomodations__location__card {
     border: 4px solid white;
-    border-radius: 20px;
+    border-radius: 15px;
     background: white;
-    width: 240px;
+    width: 185px;
     box-shadow: var(--dark-grey-bg) 0px 8px 24px;
 }
 
 
 .accomodations__location__card__img {
     width:100%;
-    height: 110px;
+    height: 85px;
     background-size: cover;
     background-position: center; 
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .accomodations__img--1 {
@@ -293,25 +333,25 @@ nav a {
 }
 
 .accomodations__location__card__description {
-    margin: 10px 10px 5px 10px;
+    margin: 8px 0 5px 8px;
 }
 
-.accomodations__location__card__description h2 {
-    font-size: 1em;
+/* .accomodations__location__card__description h2 {
+    font-size: 0.8em;
     margin: 0;
-}
+} */
 
-.accomodations__location__card__description p {
-    margin: 8px 0;
-    font-size: 0.90em;
-}
+/* .accomodations__location__card__description p {
+    margin: 5px 0;
+    font-size: 0.7em;
+} */
 
 .accomodations__location__stars {
     display: flex;
     justify-content: start;
 }
 .accomodations__location__card__description i {
-    font-size: 0.75em;
+    font-size: 0.6em;
     display: block;
     padding: 0 0.5px;
 }
@@ -325,9 +365,80 @@ nav a {
 }
 
 .accomodations__location__more {
-    margin-top: 40px;
-    display: block;
+    margin-top: 30px;
+    display: inline-block;
     font-weight: 700;
-    padding-left: 5px;
+    /* padding-left: 5px; */
+    font-size: 0.9em;
+}
+
+/* ------------------------------------------ */
+/* Accomodations__popular section styling */
+/* ------------------------------------------ */
+
+.accomodations__popular {
+    box-sizing: border-box;
+    width: 335px;
+    padding: 30px 30px 0 30px;
+    background: var(--grey-bg);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.accomodations__popular__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accomodations__popular__header i {
     font-size: 1.1em;
 }
+
+.accomodations__popular__card {
+    background: white;
+    /* width: 100%; */
+    display: flex;
+    border-radius: 15px;
+    border: 4px solid white;
+    box-shadow: var(--dark-grey-bg) 0px 8px 24px;
+    margin: 20px 0 10px 0;
+
+}
+
+.accomodations__popular__img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.accomodations__img--7 {
+    background-image: url("./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
+}
+
+.accomodations__img--8 {
+    background-image: url("./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
+}
+
+.accomodations__img--9 {
+    background-image: url("./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
+}
+
+.accomodations__popular__column {
+    width: 130px;
+    margin-left: 15px;
+    padding-top: 8px;
+}
+
+.accomodations__popular__stars {
+    font-size: 0.5em;
+    margin-top: 28px;
+}
+
+/* ------------------------------------------ */
+/* Accomodations__popular section styling */
+/* ------------------------------------------ */
