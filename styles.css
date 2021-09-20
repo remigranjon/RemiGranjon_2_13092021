@@ -16,8 +16,11 @@ body {
     
 }
 
+/* corriger facteur 1.25 */
+
 .wrapper {
     max-width: 1152px;
+    min-width: 375px;
     margin: 0 auto;
     background: white;
     box-sizing: border-box;
@@ -390,7 +393,7 @@ main {
     box-sizing: border-box;
     flex-shrink: 0;
     width: 335px;
-    padding: 30px 30px 30px 30px;
+    padding: 30px;
     background: var(--grey-bg);
     border-radius: 15px;
     display: flex;
@@ -569,7 +572,7 @@ footer p {
     }
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 740px) {
     .accomodations {
         flex-wrap: wrap-reverse;
         justify-content: center;
@@ -577,6 +580,27 @@ footer p {
 
     .accomodations__location {
         width: 335px;
+    }
+
+    .accomodations__popular {
+        padding-bottom: 20px;
+    }
+
+    .accomodations__popular__header {
+        margin-bottom: 20px;
+    }
+    .accomodations__popular__card {
+        margin: 4px 0; 
+    }
+
+    .accomodations__popular__img {
+        height:110px; 
+    }
+
+    .accomodations__popular__stars {
+        margin-top: 40px;
+        font-size: .55em;
+        /* letter-spacing: 0px; */
     }
 
 }
@@ -591,14 +615,30 @@ footer p {
         padding: 0;
     }
     
+    .accomodations {
+        gap: 0;
+    }
+
     .accomodations__popular {
         border-radius: 0;
         width: 100%;
-        padding: 30px 10px;
+        padding: 30px 20px;
     }
 
     .accomodations__location {
         width: 100%;
+        margin-top: 0;
+        background: white;
+        padding: 30px 20px;
+    }
+
+    .accomodations__location__card {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .accomodations__location__card__img {
+        height: 90px;
     }
 
 }
