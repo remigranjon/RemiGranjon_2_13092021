@@ -14,11 +14,16 @@
 
         <header>
             <div class="logo"><img src="images/logo/Reservia.svg" alt="logo de Reservia"></div>
+            <div class="header__blank"></div>
             <nav>
-                <a class="nav__anchor" href="#hebergements">Hébergements</a>
-                <a class="nav__anchor" href="#activites">Activités</a>
-                <a class="nav__subscribe" href="">S'inscrire</a>
+                <div class="nav__link">
+                    <a class="nav__anchor" href="#hebergements">Hébergements</a>
+                </div>
+                <div class="nav__link">
+                    <a class="nav__anchor" href="#activites">Activités</a>
+                </div>
             </nav>
+            <a class="nav__subscribe" href="">S'inscrire</a>
         </header>
         <main>
             <article class="options">
@@ -28,7 +33,10 @@
                     <div class="location__search">
                         <div class="location__search__icon"><i class="fas fa-map-marker-alt"></i></div>
                         <input class="location__search__input" type="text" value="Marseille, France">
-                        <div class="location__search__button"><p>Rechercher</p></div>
+                        <div class="location__search__button">
+                            <p>Rechercher</p>
+                            <i class="fas fa-search"></i>
+                        </div>
                     </div>
                 </section>
                 <section class="filters">
@@ -203,7 +211,7 @@
                     </a>
                 </section>
             </article>
-            <article class="activities">
+            <article class="activities" id="activites">
                 <h1>Activités à Marseille</h1>
                 <div class="activities__cards">
                     <div class="activities__cards__column">
@@ -245,19 +253,19 @@
         <footer>
             <div class="footer__column">
                 <h2>A propos</h2>
-                <p>Fonctionnement du site</p>
-                <p>Conditions générales de vente</p>
-                <p>Données et confidentialité</p>
+                <a href="">Fonctionnement du site</a>
+                <a href="">Conditions générales de vente</a>
+                <a href="">Données et confidentialité</a>
             </div>
             <div class="footer__column">
                 <h2>Nos hébergements</h2>
-                <p>Charte qualité</p>
-                <p>Soumettre votre hôtel</p>
+                <a href="">Charte qualité</a>
+                <a href="">Soumettre votre hôtel</a>
             </div>
             <div class="footer__column">
                 <h2>Assistance</h2>
-                <p>Centre d'aide</p>
-                <p>Nous contacter</p>
+                <a href="">Centre d'aide</a>
+                <a href="">Nous contacter</a>
             </div>
         </footer>
     </div>
