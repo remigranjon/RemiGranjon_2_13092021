@@ -5,17 +5,13 @@
     --light-blue: #DEEBFF;
     --grey-bg: #F2F2F2;
     --dark-grey-bg: #cacaca;
+    --darker-grey-bg: #d6d6d6;
 }
 
 body {
-    margin: 0;
-    
+    margin: 0;    
     font-family: 'Raleway', sans-serif;
-    /* box-sizing: border-box; */
-    
 }
-
-/* corriger facteur 1.25 */
 
 .wrapper {
     max-width: 1440px;
@@ -51,7 +47,6 @@ header {
     padding-top: 44px;
     position: relative;
     right: 15px;
-    /* margin-right: 400px; */
 }
 
 .logo img {
@@ -64,11 +59,8 @@ header {
 }
 
 nav {
-    /* width : 410px; */
     display: flex;
     flex-shrink: 0;
-    /* justify-content: space-between; */
-    /* margin-right: 20px; */
 }
 
 header a {
@@ -90,6 +82,10 @@ header a {
     border-top: var(--blue) 2px solid;
 }
 
+.nav__link:hover > .nav__anchor{
+    color: var(--blue);
+}
+
 .nav__subscribe {
     color: var(--blue);
     font-weight: 700;
@@ -106,10 +102,6 @@ main {
 /* ------------------------------------------ */
 /* Location section styling */
 /* ------------------------------------------ */
-/* .location {
-    margin-top: 40px;
-} */
-
 .location {
     margin-left: 5px;
 }
@@ -145,7 +137,6 @@ main {
 .location__search__icon i {
     font-size: 1.1em;
     position: relative;
-    /* left: 2.5px; */
 }
 
 .location__search__input {
@@ -211,7 +202,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2.5px solid var(--dark-grey-bg);
+    border: 2.5px solid var(--darker-grey-bg);
     border-radius: 75px;
     margin: 12.5px;
     cursor: pointer;
@@ -274,11 +265,8 @@ main {
 
 .accomodations {
     display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
     gap: 37.5px;
     justify-content: space-between;
-    /* margin-top: 30px; */
 }
 
 .accomodations h1 {
@@ -301,7 +289,6 @@ main {
     box-sizing: border-box;
     flex-shrink: 3;
     max-width: 900px;
-    /* width: min-content; */
     background: var(--grey-bg);
     border-radius: 25px;
     padding: 44px 40.5px;
@@ -311,14 +298,7 @@ main {
 
 
 .accomodations__location__cards {
-    /* margin-top: 20px; */
     margin: 25px 0 0 0;
-    /* display: grid; */
-    /* grid-template-columns: repeat(3,1fr); */
-    /* grid-template-columns: repeat(auto-fill,240px); */
-    /* grid-template-rows: repeat(2,1fr); */
-    
-
     display: flex;
     justify-content: center;
     flex-wrap:wrap;
@@ -330,7 +310,6 @@ main {
     border-radius: 19px;
     background: white;
     width: 236.5px;
-    /* width: 100%; */
     box-shadow: var(--dark-grey-bg) 0px 5px 10px;
 }
 
@@ -372,16 +351,6 @@ main {
     margin: 10px 0 6px 10px;
 }
 
-/* .accomodations__location__card__description h2 {
-    font-size: 0.8em;
-    margin: 0;
-} */
-
-/* .accomodations__location__card__description p {
-    margin: 5px 0;
-    font-size: 0.7em;
-} */
-
 .accomodations__location__stars {
     display: flex;
     justify-content: start;
@@ -404,7 +373,6 @@ main {
     margin-top: 37.5px;
     display: inline-block;
     font-weight: 700;
-    /* padding-left: 5px; */
     font-size: 1.13em;
     margin-left: 3px;
 }
@@ -437,7 +405,6 @@ main {
 
 .accomodations__popular__card {
     background: white;
-    /* width: 100%; */
     display: flex;
     border-radius: 19px;
     border: 5px solid white;
@@ -501,7 +468,6 @@ main {
 .activities__cards {
     display: flex;
     justify-content: center;
-    /* gap: 15px; */
     flex-wrap: wrap;
     gap: 43px;
     margin-top: 23px;
@@ -519,6 +485,7 @@ main {
     box-shadow: var(--dark-grey-bg) 0px 5px 10px;
     background: var(--grey-bg);
     display: block;
+    
 }
 
 .activities__img {
@@ -568,7 +535,6 @@ footer {
     background: var(--grey-bg);
     padding: 45px 50px 87.5px 50px;
     display: flex;
-    /* gap: 200px; */
 }
 
 footer h2 {
@@ -661,7 +627,6 @@ footer a {
     .accomodations__popular__stars {
         margin-top: 50px;
         font-size: .7em;
-        /* letter-spacing: 0px; */
     }
 
 }
@@ -709,11 +674,6 @@ footer a {
     .nav__subscribe {
         padding-top: 39px;
     }
-    /* nav a {
-        box-sizing: border-box;
-        width: 50%;
-        padding: 47px auto 0 auto;
-    } */
 }
 
 @media screen and (max-width: 525px) {
